@@ -876,7 +876,7 @@ public class Application {
 그리고 config 패키지에 JpaConfig를 생성하여 @EnableJpaAuditing를 추가  
 [![그림 1-39](/assets/Web/AWS/2020-04-10-SpringBoot-AWS-05-img39.png)](/assets/Web/AWS/2020-04-10-SpringBoot-AWS-05-img39.png)  
   
-src/main/java/com/freehyun/book/springboot/config/JpaConfig  
+`src/main/java/com/freehyun/book/springboot/config/JpaConfig`  
 ```java  
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
