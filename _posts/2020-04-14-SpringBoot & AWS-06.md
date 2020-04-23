@@ -23,7 +23,7 @@ last_modified_at: 2020-04-09
 > [스프링 부트와 AWS로 혼자 구현하는 웹서비스 (프리렉, 이동욱 지음)](https://jojoldu.tistory.com/463)  
 > [예제 코드 내려받기](http://bit.ly/fr-springboot)
   
-## AWS 회원가입
+## AWS 회원가입  
 Master 혹은 Visa 카드가 필요하다. 본인의 카드 중 Master 혹은 Visa 카드를 준비한 뒤 진행하자.  
 AWS 공식 사이트[https://aws.amazon.com/ko/](https://aws.amazon.com/ko/)로 이동한 뒤 무료계정 만들기를 선택한다.  
   
