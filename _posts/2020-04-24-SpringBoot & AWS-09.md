@@ -1,5 +1,5 @@
 ---
-title: "Ⅷ. Travis CI 배포 자동화"
+title: "Ⅸ. Travis CI 배포 자동화"
 excerpt: "코드가 푸시되면 자동으로 배포"
 
 categories:
