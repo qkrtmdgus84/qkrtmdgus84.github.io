@@ -559,7 +559,7 @@ version '1.0.1-SNAPSHOT'
 ```  
   
 텍스트를 추가하였다면 깃허브로 커밋과 푸시를 한다. 그럼 다음과 같이 변경된 코드가 배포된 것을 확인할 수 있다.  
-
+[![그림 1-53](/assets/Web/AWS/2020-04-24-SpringBoot-AWS-09-img53.png)](/assets/Web/AWS/2020-04-24-SpringBoot-AWS-09-img53.png)  
 신규 버전이 정상적으로 잘 배포되었다.  
   
 ## CodeDeploy 로그 확인  
