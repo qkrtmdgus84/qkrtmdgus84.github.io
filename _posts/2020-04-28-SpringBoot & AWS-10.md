@@ -464,7 +464,7 @@ else
   sleep 5
 fi
 ```  
-1. ABSDIR=$(dirname $ABSPATH)  
+1. `ABSDIR=$(dirname $ABSPATH)`  
 + 현재 `stop.sh`가 속해 있는 경로를 찾는다.  
 + 하단의 코드와 같이 `profile.sh`의 경로를 찾기 위해 사용  
 2. source ${ABSDIR}/profile.sh  
@@ -509,7 +509,7 @@ nohup java -jar \
     $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
 ```  
 1. 기본적인 스크립트는 step2의 `deploy.sh`와 유사  
-2. 다른 점이라면 IDLE_PROFILE을 통해 properties 파일을 가져오고(application-$IDLE_PROFILE.properties), active profile을 지정하는 것(-Dspring.profiles.active=$IDLE_PROFILE)뿐이다.  
+2. 다른 점이라면 IDLE_PROFILE을 통해 properties 파일을 가져오고(`application-$IDLE_PROFILE.properties`), active profile을 지정하는 것(`-Dspring.profiles.active=$IDLE_PROFILE`)뿐이다.  
 3. 여기서도 IDLE_PROFILE을 사용하니 `profile.sh`을 가져와야 한다.  
   
 `health.sh`  
@@ -584,7 +584,7 @@ function switch_proxy() {
 }
 
 ```  
-1. echo "set \$service_url http://127.0.0.1:${IDLE_PORT};"  
+1. `echo "set \$service_url http://127.0.0.1:${IDLE_PORT};"`  
 + 하나의 문장을 만들어 파이프라이(|)으로 넘겨주기 위해 echo를 사용  
 + 엔진엑스가 변경할 프록시 주소를 생성  
 + 쌍따옴표 (")를 사용해야 한다.  
