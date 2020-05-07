@@ -127,31 +127,31 @@ echo "> JAR Name: $JAR_NAME"
 nohup java -jar  $REPOSITORY/$JAR_NAME 2>&1 &  9.
 
 ```  
-1. REPOSITORY=/home/ec2-user/app/step1  
+1. REPOSITORY=`/home/ec2-user/app/step1`  
 + 프로젝트 디렉토리 주소는 스크립트 내에서 자주 사용하는 값이기 때문에 이를 변수로 저장  
 + PROJECT_NAME=freehyun-springboot-webservice도 동일하게 변수로 저장  
 + 쉘에서는 타입 없이 선언하여 저장  
 + 쉘에서는 $변수명으로 변수를 사용  
-2. cd $REPOSITORY/$PROJECT_NAME/  
+2. cd `$REPOSITORY/$PROJECT_NAME/`  
 + git clone 받았던 디렉토리로 이동  
-+ /home/ec2-user/app/step1/freehyun-springboot-webservice 주소로 이동  
++ `/home/ec2-user/app/step1/freehyun-springboot-webservice` 주소로 이동  
 3. git pull  
 + 디렉토리 이동 후, master 브랜치의 최신 내용을 받는다.  
 4. ./gradlew build  
 + 프로젝트 내부의 gradlew로 build를 수행  
-5. cp $REPOSITORY/$PROJECT_NAME/build/libs/*.jar $REPOSITORY/  
+5. cp `$REPOSITORY/$PROJECT_NAME/build/libs/*.jar $REPOSITORY/`  
 + build의 결과물인 jar 파일을 복사해 jar 파일을 모아둔 위치로 복사  
-6. CURRENT_PID=$(pgrep -f ${PROJECT_NAME}*.jar)  
+6. `CURRENT_PID=$(pgrep -f ${PROJECT_NAME}*.jar)`  
 + 기존에 수행 중이던 스프링 부트 애플리케이션을 종료  
 + pgrep은 process id만 추출하는 명령어  
 + -f 옵션은 프로세스 이름으로 찾는다.  
 7. if ~ else ~ fi  
 + 현재 구동 중인 프로세스가 있는지 없는지를 판단해서 기능을 수행  
 + process id 값을 보고 프로세스가 있으면 해당 프로세스를 종료  
-8. JAR_NAME=$(ls -tr $REPOSITORY/ | grep *.jar | tail -n 1)  
+8. `JAR_NAME=$(ls -tr $REPOSITORY/ | grep *.jar | tail -n 1)`  
 + 새로 실행할 jar 파일명을 찾는다.  
 + 여러 jar 파일이 생기기 때문에 tail -n로 가장 나중의 jar 파일(최신 파일)을 변수에 저장  
-9. nohup java -jar  $REPOSITORY/$JAR_NAME 2>&1 &  
+9. `nohup java -jar  $REPOSITORY/$JAR_NAME 2>&1 &`  
 + 찾은 jar 파일명으로 해당 jar 파일을 nohup으로 실행  
 + 스프링 부트의 장점으로 특별히 외장 톰캣을 설치할 필요가 없다.  
 + 내장 톰캣을 사용해서 jar 파일만 있으면 바로 웹 애플리케이션 서버를 실행할 수 있다.  
